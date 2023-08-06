@@ -34,6 +34,9 @@ jobs:
         # https://github.com/JamesIves/github-pages-deploy-action
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          git-config-name: 'Kai Nagar'
+          git-config-email: 'kaynagar@gmail.com'
+          repository-name: ZFO-Next.js
           ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
           branch: gh-pages
           folder: out
