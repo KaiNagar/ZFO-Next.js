@@ -37,6 +37,6 @@ jobs:
           git-config-name: 'Kai Nagar'
           git-config-email: 'kaynagar@gmail.com'
           repository-name: KaiNagar/ZFO-Next.js
-          ACCESS_TOKEN: ${{secrets.NEW_TOKEN}}
+          token: ${{secrets.NEW_TOKEN}}
           branch: gh-pages
           folder: out
