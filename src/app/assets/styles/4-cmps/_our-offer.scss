@@ -1,0 +1,92 @@
+.our-offer-container {
+  background-image: url('https://res.cloudinary.com/db9bey3ot/image/upload/v1691231723/background_center_fwlhaz.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 2rem 0;
+  color: $clr-white;
+  .our-offer {
+  }
+
+  .offer-info {
+    align-items: flex-start;
+    .what-we-offer-header {
+      font-size: rem(22px);
+    }
+    .big-header {
+      font-size: rem(50px);
+      font-family: montserrat-bold;
+      color: $clr-SDark;
+    }
+    .offer-sub-header,
+    .offer-text-1,
+    .offer-text-2 {
+      font-size: rem(18px);
+      margin-top: 1rem;
+    }
+  }
+  .not-offer-info {
+    margin-left: 3rem;
+    .not-offer-header {
+      font-family: montserrat-bold;
+      font-size: rem(22px);
+    }
+    .not-offer-sub-header {
+      font-size: rem(26px);
+    }
+    .highlighted {
+      font-style: italic;
+    }
+    ul {
+      margin-top: 1.5rem;
+      li {
+        font-family: montserrat-bold;
+        font-size: rem(22px);
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .x-icon {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// mobile
+@media screen and (max-width: 1070px) {
+  .our-offer {
+    flex-direction: column-reverse;
+  }
+  .offer-info {
+    padding: 0;
+    max-width: 350px;
+    .book-call-btn {
+      @include call-to-action-btn;
+      font-size: rem(16px);
+      align-self: center;
+      margin-bottom: 3rem;
+      .btn-small-text {
+        font-size: rem(12px);
+      }
+    }
+  }
+  .not-offer-info {
+    max-width: 350px;
+    padding-bottom: 2rem;
+  }
+}
+// desktop
+@media screen and (min-width: 1070px) {
+  .offer-info {
+    width: 50%;
+
+    padding: 3rem 0;
+    .book-call-btn {
+      @include call-to-action-btn;
+    }
+  }
+  .not-offer-info {
+    width: 50%;
+  }
+}
