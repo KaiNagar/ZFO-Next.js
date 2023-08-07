@@ -29,6 +29,8 @@ jobs:
           npm run build
           npm run export
           touch out/.nojekyll
+        env: 
+          NEXT_PUBLIC_BASE_PATH: '/ZFO-Next.js'
 
       - name: Deploy
         # https://github.com/JamesIves/github-pages-deploy-action

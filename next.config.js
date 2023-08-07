@@ -14,13 +14,13 @@ if (isGithubActions) {
 
 module.exports = {
   assetPrefix: assetPrefix,
-  basePath: basePath,
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   images: {
     loader: 'imgix',
     path: 'the "domain" of your Imigix source',
   },
-  output:'export',
-  sassOptions:{
-    includePaths:[path.join(__dirname,'styles')]
+  output: 'export',
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')]
   }
 }
