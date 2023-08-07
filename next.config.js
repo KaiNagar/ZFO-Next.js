@@ -2,7 +2,8 @@
 const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 let assetPrefix = ''
-let basePath = '/'
+let basePath = ''
+const path = require('path')
 
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
@@ -19,4 +20,7 @@ module.exports = {
     path: 'the "domain" of your Imigix source',
   },
   output:'export',
+  sassOptions:{
+    includePaths:[path.join(__dirname,'styles')]
+  }
 }
